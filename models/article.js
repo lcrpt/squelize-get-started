@@ -33,19 +33,23 @@ const Articles = connection.define('article', {
       startsWithUpper,
     },
   },
+  approved: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false,
+  }
 }, {
   hooks: {
     beforeValidate: () => {
-      console.log('### beforeValidate ###');
+      // console.log('### beforeValidate ###');
     },
     afterValidate: () => {
-      console.log('### afterValidate ###');
+      // console.log('### afterValidate ###');
     },
     beforeCreate: () => {
-      console.log('### beforeCreate ###');
+      // console.log('### beforeCreate ###');
     },
     afterCreate: () => {
-      console.log('### afterCreate ###');
+      // console.log('### afterCreate ###');
     },
   },
 });
